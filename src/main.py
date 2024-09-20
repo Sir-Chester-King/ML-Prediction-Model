@@ -1,7 +1,7 @@
 # ---- IMPORT SECTION ---- #
 from clear_console import *
 from data import load_data
-from econding_category import hot_coding
+from econding_category import *
 from handle_missing_data import handle_missing_values
 
 # ---- MAIN CODE SECTION ---- #
@@ -31,11 +31,19 @@ def main():
         print(matrix_features_independent)
 
     # Hot-Coding to convert categorical data into values, to be manipulated for the machine learning model.
-    matrix_features_independent = hot_coding(matrix_features_independent)
+    matrix_features_independent = hot_coding_independent_variables(matrix_features_independent)
 
     print('\n')
     print("New Dataset with Country column hot-encoded", end='\n')
     print(matrix_features_independent)
+
+    # Hot-Coding to convert categorical data into values, to be manipulated for the machine learning model.
+    vector_features_dependent = hot_coding_dependent_variables(vector_features_dependent)
+
+    print('\n')
+    print("New Dataset with Purchased column hot-encoded", end='\n')
+    print(vector_features_dependent)
+
 
 # __name__ is a special built-in variable that exists in every module (a module is simply a Python file).
 # __main__ is a string that Python assigns to the __name__ variable when the module is executed as the main program.
