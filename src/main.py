@@ -32,6 +32,24 @@ def main():
     print(vector_features_dependent)
 
 
+# ---- MAIN CODE SECTION ---- #
+
+
+# ---- TAKE CARE OF MISSING DATA SECTION ---- #
+"""
+Function to handle the missing values in the dataset.
+To perform that, in the 'Salary' colum, in case of missing value, the value 
+will be replaced with the average of all the values in the 'Salary' colum.
+"""
+
+
+def handle_missing_values():
+    pass
+
+
+# ---- TAKE CARE OF MISSING DATA SECTION ---- #
+
+
 # __name__ is a special built-in variable that exists in every module (a module is simply a Python file).
 # __main__ is a string that Python assigns to the __name__ variable when the module is executed as the main program.
 # It serves as an entry point for the script execution.
