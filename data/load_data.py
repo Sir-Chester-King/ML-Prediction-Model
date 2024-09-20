@@ -1,3 +1,4 @@
+# ---- IMPORT SECTION ---- #
 import os
 
 import dotenv
@@ -23,5 +24,3 @@ def load_data():
     vector_features_dependent = dataset.iloc[:, -1].values
 
     return matrix_features_independent, vector_features_dependent, has_nan
-
-# ---- LOAD DATA FROM CSV SECTION ---- #

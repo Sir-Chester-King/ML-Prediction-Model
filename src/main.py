@@ -1,9 +1,8 @@
 # ---- IMPORT SECTION ---- #
 from clear_console import *
 from data import load_data
+from econding_category import hot_coding
 from handle_missing_data import handle_missing_values
-
-# ---- IMPORT SECTION ---- #
 
 # ---- MAIN CODE SECTION ---- #
 """Machine learning model to predict the potential purchase of a car of a person, using 
@@ -25,17 +24,18 @@ def main():
     print(vector_features_dependent)
 
     if has_nan:
-        print('\n')
-        print("There is/are missing value", end='\n')
         matrix_features_independent = handle_missing_values(matrix_features_independent)
 
         print('\n')
         print("New Dataset without data missing", end='\n')
         print(matrix_features_independent)
 
+    # Hot-Coding to convert categorical data into values, to be manipulated for the machine learning model.
+    matrix_features_independent = hot_coding(matrix_features_independent)
 
-# ---- MAIN CODE SECTION ---- #
-
+    print('\n')
+    print("New Dataset with Country column hot-encoded", end='\n')
+    print(matrix_features_independent)
 
 # __name__ is a special built-in variable that exists in every module (a module is simply a Python file).
 # __main__ is a string that Python assigns to the __name__ variable when the module is executed as the main program.

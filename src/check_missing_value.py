@@ -1,3 +1,4 @@
+# ---- IMPORT SECTION ---- #
 import numpy
 
 
@@ -12,4 +13,3 @@ def check_missing_value(matrix_features_independent):
 
     if has_nan:
         return True
-# ---- CHECK MISSING VALUE SECTION ---- #

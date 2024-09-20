@@ -1,3 +1,4 @@
+# ---- IMPORT SECTION ---- #
 import numpy
 from sklearn.impute import *
 
@@ -55,4 +56,3 @@ def handle_missing_values(matrix_features_independent):
     matrix_features_independent[:, 1:3] = new_dataset
 
     return matrix_features_independent
-# ---- TAKE CARE OF MISSING DATA SECTION ---- #
