@@ -7,6 +7,8 @@ ML model developed to predict the potential purchase of a car by a person.
 from clear_console import *
 from data_processing.encoding_categorical_data import *
 from data_processing.handle_missing_data import handle_missing_data
+from data_processing.scaling import *
+from data_processing.split_data import *
 from dataset import load_data
 
 
@@ -33,7 +35,7 @@ def main():
         print(variables_feature)
     # ---- CHECK FOR MISSING DATA ---- #
 
-    # ---- HOT-ENCODING 'CATEGORICAL' DATA---- #
+    # ---- HOT-ENCODING 'CATEGORICAL' DATA ---- #
 
     # Hot-Coding to convert categorical data in <FEATURE> variables into values.
     variables_feature = hot_coding_FEATURE_variable(variables_feature)
@@ -48,9 +50,45 @@ def main():
     print("-" * 40)
     print("Hot-Encoded 'Target' Variables", end='\n')
     print(variables_target)
+    # ---- HOT-ENCODING 'CATEGORICAL' DATA ---- #
+
+    # ---- SPLIT TRAIN & TEST SET ---- #
+    feature_train, feature_test, target_train, target_test = split_DATASET(variables_feature, variables_target)
+    print("-" * 40)
+    print("-" * 40)
+    print("'Feature' TRAIN SET", end='\n')
+    print(feature_train)
+
+    print("-" * 40)
+    print("-" * 40)
+    print("'Feature' TEST SET", end='\n')
+    print(feature_test)
+
+    print("-" * 40)
+    print("-" * 40)
+    print("'Target' TRAIN SET", end='\n')
+    print(target_train)
+
+    print("-" * 40)
+    print("-" * 40)
+    print("'Target' TEST SET", end='\n')
+    print(target_test)
+    # ---- SPLIT TRAIN & TEST SET ---- #
+
+    # ---- SCALING FEATURE ---- #
+    feature_train, feature_test = scaling_FEATURE_variables(feature_train, feature_test)
+    print("-" * 40)
+    print("-" * 40)
+    print("'Feature' TRAINING SCALED", end='\n')
+    print(feature_train)
+
+    print("-" * 40)
+    print("-" * 40)
+    print("'Feature' TEST SCALED", end='\n')
+    print(feature_test)
 
 
-# ---- HOT-ENCODING 'CATEGORICAL' DATA---- #
+# ---- SCALING FEATURE ---- #
 
 
 if __name__ == '__main__':
