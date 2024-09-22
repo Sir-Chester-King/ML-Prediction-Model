@@ -16,11 +16,11 @@ def load_data():
     has_nan = check_missing_value.check_missing_value(dataset.iloc[:, 1:3].values)
 
     # Gather all the values in the columns from the dataset, except the last one; as a numpy array.
-    # Used the ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
-    matrix_features_independent = dataset.iloc[:, :-1].values
+    # Used the .ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
+    feature_variables = dataset.iloc[:, :-1].values
 
     # Gather all the values in the last column from the dataset; as a numpy array.
-    # Used the ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
-    vector_features_dependent = dataset.iloc[:, -1].values
+    # Used the .ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
+    target_variables = dataset.iloc[:, -1].values
 
-    return matrix_features_independent, vector_features_dependent, has_nan
+    return feature_variables, target_variables, has_nan
