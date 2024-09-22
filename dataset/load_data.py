@@ -4,7 +4,7 @@ import os
 import dotenv
 import pandas
 
-from src import check_missing_value
+from data_processing import check_missing_value
 
 
 # ---- LOAD DATA FROM CSV SECTION ---- #
@@ -16,11 +16,11 @@ def load_data():
     has_nan = check_missing_value.check_missing_value(dataset.iloc[:, 1:3].values)
 
     # Gather all the values in the columns from the dataset, except the last one; as a numpy array.
-    # Used the ILOC indexer in PANDAS to select the subset of the data and store that in the variable.
+    # Used the ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
     matrix_features_independent = dataset.iloc[:, :-1].values
 
     # Gather all the values in the last column from the dataset; as a numpy array.
-    # Used the ILOC indexer in PANDAS to select the subset of the data and store that in the variable.
+    # Used the ILOC indexer in PANDAS to select the subset of the dataset and store that in the variable.
     vector_features_dependent = dataset.iloc[:, -1].values
 
     return matrix_features_independent, vector_features_dependent, has_nan

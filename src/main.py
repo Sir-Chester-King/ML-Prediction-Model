@@ -1,48 +1,51 @@
 # ---- IMPORT SECTION ---- #
 from clear_console import *
-from data import load_data
-from econding_category import *
-from handle_missing_data import handle_missing_values
+from data_processing.econding_category import *
+from data_processing.handle_missing_data import handle_missing_data
+from dataset import load_data
 
 # ---- MAIN CODE SECTION ---- #
 """Machine learning model to predict the potential purchase of a car of a person, using 
 the dataset as source input.
-
-Import and processing DataSet.
 """
 
 
 def main():
     clear()
-    matrix_features_independent, vector_features_dependent, has_nan = load_data.load_data()
+    variables_feature, variables_target, has_nan = load_data.load_data()
+    clear()
 
-    print("Matrix Features Independent:", end='\n')
-    print(matrix_features_independent)
+    print("'Features' Variables:", end='\n')
+    print(variables_feature)
 
-    print('\n')
-    print("Vector Features Dependent:", end='\n')
-    print(vector_features_dependent)
+    print("-" * 40)
+    print("-" * 40)
+    print("'Target' Variables:", end='\n')
+    print(variables_target)
 
     if has_nan:
-        matrix_features_independent = handle_missing_values(matrix_features_independent)
+        variables_feature = handle_missing_data(variables_feature)
 
-        print('\n')
-        print("New Dataset without data missing", end='\n')
-        print(matrix_features_independent)
+        print("-" * 40)
+        print("-" * 40)
+        print("New Dataset 'Features' without missing data", end='\n')
+        print(variables_feature)
 
-    # Hot-Coding to convert categorical data into values, to be manipulated for the machine learning model.
-    matrix_features_independent = hot_coding_independent_variables(matrix_features_independent)
+    # Hot-Coding to convert categorical dataset into values, to be manipulated for the machine learning model.
+    variables_feature = hot_coding_variables_feature(variables_feature)
 
-    print('\n')
-    print("New Dataset with Country column hot-encoded", end='\n')
-    print(matrix_features_independent)
+    print("-" * 40)
+    print("-" * 40)
+    print("Hot-Encoded 'Categorical Features' Values", end='\n')
+    print(variables_feature)
 
-    # Hot-Coding to convert categorical data into values, to be manipulated for the machine learning model.
-    vector_features_dependent = hot_coding_dependent_variables(vector_features_dependent)
+    # Hot-Coding to convert categorical dataset into values, to be manipulated for the machine learning model.
+    variables_target = hot_coding_variables_target(variables_target)
 
-    print('\n')
-    print("New Dataset with Purchased column hot-encoded", end='\n')
-    print(vector_features_dependent)
+    print("-" * 40)
+    print("-" * 40)
+    print("Hot-Encoded 'Target' Variables", end='\n')
+    print(variables_target)
 
 
 # __name__ is a special built-in variable that exists in every module (a module is simply a Python file).

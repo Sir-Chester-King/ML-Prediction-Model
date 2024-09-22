@@ -6,12 +6,12 @@ from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 """
 One-hot encoding (or "hot coding") is a technique used to convert categorical variables into a
 format that can be fed to machine learning models.
-Since machine learning models generally work best with numeric data, one-hot encoding transforms
+Since machine learning models generally work best with numeric dataset, one-hot encoding transforms
 categorical variables into numeric columns.
 """
 
 
-def hot_coding_independent_variables(matrix_features_independent):
+def hot_coding_variables_feature(variables_feature):
     """
         Sklearn ColumnTransformer's class, is a useful tool for applying different transformations
         to different columns in a dataset.
@@ -35,12 +35,12 @@ def hot_coding_independent_variables(matrix_features_independent):
     """
         Application the transformation ( using fit_transform() )and return of columns transformed as a NumPy array.
     """
-    matrix_features_independent = numpy.array(colum_transform_instance.fit_transform(matrix_features_independent))
+    variables_feature = numpy.array(colum_transform_instance.fit_transform(variables_feature))
 
-    return matrix_features_independent
+    return variables_feature
 
 
-def hot_coding_dependent_variables(vector_features_dependent):
+def hot_coding_variables_target(variables_target):
     """
         Sklearn LabelEncoder's class is used to transform categorical variables into numeric values.
         It is a useful tool when working with machine learning models that require numeric input, such as
@@ -56,6 +56,6 @@ def hot_coding_dependent_variables(vector_features_dependent):
     """
         It's a binary vector, so it doesn't necessary to cast it as a NON binary vector.    
     """
-    vector_features_dependent = label_encoder_vector.fit_transform(vector_features_dependent)
+    variables_target = label_encoder_vector.fit_transform(variables_target)
 
-    return vector_features_dependent
+    return variables_target
