@@ -15,7 +15,7 @@ The dataset (`data.csv`), available in the project repository, includes various 
 - **Dependent Variables (Target)**:  
   - Car Purchased (Binary outcome indicating whether a customer has purchased a car)
 
-This model development is <strong>IN PROGRESS</strong> and serves as an integral component of my learning process, specifically targeting skills needed for machine learning deployment and optimization.
+This model development is <strong><em>IN PROGRESS</em></strong> and serves as an integral component of my learning process, specifically targeting skills needed for machine learning deployment and optimization.
 
 ---
 ## Author
