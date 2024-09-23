@@ -10,11 +10,14 @@ def main():
     from sklearn.linear_model import LinearRegression
 
     dataset = pandas.read_csv('Salary_Data.csv')
-    feature = dataset.iloc[:, :-1].values
-    target = dataset.iloc[:, -1].values
+    feature = dataset.iloc[:, :-1].values  # Gather the columns of features (Independent variables)
+    target = dataset.iloc[:, -1].values  # Gather the columns of targets (Dependent variables)
+
     mean_feature = numpy.mean(feature)
     mean_target = numpy.mean(target)
 
+    # Split the dataset to use the 80% of data to a train model and
+    # the 20% to use as a Test (new data we want to predict values)
     feature_train, feature_test, target_train, target_test = split_data(feature, target)
 
     print("-" * 40)
@@ -105,7 +108,8 @@ def split_data(feature, target):
 if __name__ == '__main__':
     main()
 
-'''# Function to calculate the linear regression without the class LinearRegressio.
+'''
+# Function to calculate the linear regression without the class LinearRegression.
 def calculate_linear_regression():
     import numpy
     # Average of Feature and Target
@@ -119,4 +123,5 @@ def calculate_linear_regression():
     beta_0 = mean_target - beta_1 * mean_feature
 
     # Straight of regression
-    target_prediction = beta_0 + beta_1 * feature'''
+    target_prediction = beta_0 + beta_1 * feature
+'''
