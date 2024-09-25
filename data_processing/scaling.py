@@ -2,7 +2,6 @@
 Class StandardScaler is used to standardise the feature of dataset.
 """
 
-
 # ---- IMPORT SECTION ---- #
 from sklearn.preprocessing import StandardScaler
 
