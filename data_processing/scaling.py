@@ -1,5 +1,9 @@
 """
 Class StandardScaler is used to standardise the feature of dataset.
+Calculates the mean and standard deviation for each characteristic and uses them to transform the data, so that
+the distribution of each feature has:
+    - An average equal to 0,
+    - A standard deviation equal to 1.
 """
 
 # ---- IMPORT SECTION ---- #
