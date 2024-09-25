@@ -86,9 +86,7 @@ def main():
     print("-" * 40)
     print("'Feature' TEST SCALED", end='\n')
     print(feature_test)
-
-
-# ---- SCALING FEATURE ---- #
+    # ---- SCALING FEATURE ---- #
 
 
 if __name__ == '__main__':
