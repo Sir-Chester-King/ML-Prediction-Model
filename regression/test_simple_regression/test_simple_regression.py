@@ -1,10 +1,10 @@
 """
     THIS CODE IS USED AS EDUCATION PURPOSE TO UNDERSTAND HOW LINEAR REGRESSION WORKS.
 """
-import numpy
 
 
 def main():
+    import numpy
     import pandas
     import matplotlib.pyplot as plt
     from sklearn.linear_model import LinearRegression
