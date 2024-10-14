@@ -30,7 +30,7 @@ def main():
     multiple_lr_model = LinearRegression()  # Create instance of LinearRegression
 
     '''
-        - Train the model to calculate the straight of linear regression using:
+        - Train the model to calculate the straight of linear Regressions using:
             1) X1...Xn = feature
             2) Y = target
         - .fit() method calculate the best optimal values for the  linear straight:

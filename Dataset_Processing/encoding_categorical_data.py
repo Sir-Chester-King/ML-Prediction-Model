@@ -13,7 +13,7 @@ each of them.
 
 Sklearn LabelEncoder's class is used to transform categorical variables into numeric values.
 It is a useful tool when working with machine learning models that require numeric input, such as
-many classification and regression models.
+many classification and Regressions models.
 """
 
 # ---- IMPORT SECTION ---- #

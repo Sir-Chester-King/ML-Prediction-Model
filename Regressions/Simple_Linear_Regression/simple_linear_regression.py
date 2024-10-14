@@ -43,7 +43,7 @@ def main():
     regression = LinearRegression()  # Instance of Linear Regression class to calculate the straight line.
 
     '''
-        - Train the model to calculate the straight of linear regression using:
+        - Train the model to calculate the straight of linear Regressions using:
             1) x = feature
             2) y = target
         - .fit() method calculate the best optimal values for the  linear straight:
@@ -76,7 +76,7 @@ def main():
         # Creating the scatter plot with real data (feature_train and target_train)
         plt.scatter(feature_train, target_train, color='blue', label='Real Data')
 
-        # Creating the linear regression straight
+        # Creating the linear Regressions straight
         plt.plot(feature_train, target_test_prediction, color='red', label='Regression Straight')
 
         # Defying label and title of plot
@@ -100,7 +100,7 @@ def main():
         # Creating the scatter plot with real data (feature_train and target_train)
         plt.scatter(feature_test, target_test, color='blue', label='Real Data')
 
-        # Creating the linear regression straight
+        # Creating the linear Regressions straight
         plt.plot(feature_train, target_test_prediction, color='red', label='Regression Straight')
 
         # Defying label and title of plot
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     main()
 
 '''
-# Function to calculate the linear regression without the class LinearRegression.
+# Function to calculate the linear Regressions without the class LinearRegression.
 def calculate_linear_regression():
     import numpy
     # Average of Feature and Target
@@ -142,10 +142,10 @@ def calculate_linear_regression():
 
     print(mean_feature, mean_target)
 
-    # Calculate the Coefficients of regression
+    # Calculate the Coefficients of Regressions
     beta_1 = numpy.sum((feature - mean_feature) * (target - mean_target)) / numpy.sum((feature - mean_feature) ** 2)
     beta_0 = mean_target - beta_1 * mean_feature
 
-    # Straight of regression
+    # Straight of Regressions
     target_prediction = beta_0 + beta_1 * feature
 '''

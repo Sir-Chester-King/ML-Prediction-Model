@@ -1,15 +1,10 @@
-"""
-Machine Learning Model Project:
-ML model developed to predict the potential purchase of a car by a person.
-"""
-
 # ---- IMPORT SECTION ---- #
+from Dataset_Processing.dataset import load_data
+from Dataset_Processing.encoding_categorical_data import *
+from Dataset_Processing.handle_missing_data import handle_missing_data
+from Dataset_Processing.scaling import *
+from Dataset_Processing.split_data import *
 from clear_console import *
-from data_processing.encoding_categorical_data import *
-from data_processing.handle_missing_data import handle_missing_data
-from data_processing.scaling import *
-from data_processing.split_data import *
-from dataset import load_data
 
 
 # ---- MAIN CODE SECTION ---- #
