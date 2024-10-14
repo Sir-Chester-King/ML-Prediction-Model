@@ -1,21 +1,18 @@
-# ML-Prediction-Model
+# Machine Learning (ML) Regressions
 ## <mark>Educational Purpose</mark>
 
-**Project: Development of a Machine Learning Model to Predict Car Purchase Likelihood**
+**Project: Development of a Machine Learning Model to Predict Values From Data Using Regression Algorithms**
 
-This project focuses on building a machine learning model aimed at predicting the probability of a customer purchasing a car, based on demographic and financial data.<br>
-It is an active part of my ongoing training as a Machine Learning Engineer, serving as a practical exercise to strengthen my skills in data preprocessing, feature engineering, model training, and evaluation.
+This project focuses on developing predictive machine learning models using various Regression algorithms.
+- Simple Linear Regression
+- Multiple Linear Regression
+- Support Vector Regression (SVR)
+- Decision Tree Regression
+- Random Forest Regression
 
-The dataset (`data.csv`), available in the project repository, includes various features that will be used to inform the prediction model.
+All for educational purposes to improve learning how ML models work.
 
-- **Independent Variables (Feature)**:  
-  - Country  
-  - Age  
-  - Salary
-- **Dependent Variables (Target)**:  
-  - Car Purchased (Binary outcome indicating whether a customer has purchased a car)
-
-This model development is <strong><ins>IN PROGRESS</ins></strong> and serves as an integral component of my learning process, specifically targeting skills needed for machine learning deployment and optimization.
+This models development is <strong><ins>IN PROGRESS</ins></strong> and serves as an integral component of my learning process, specifically targeting skills needed for machine learning deployment and optimization.
 
 ---
 ## Author
