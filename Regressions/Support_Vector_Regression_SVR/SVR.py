@@ -1,5 +1,5 @@
 """
-    THIS CODE IS USED AS EDUCATION PURPOSE TO UNDERSTAND HOW LINEAR REGRESSION WORKS.
+    THIS CODE IS USED AS EDUCATION PURPOSE TO UNDERSTAND HOW REGRESSION WORKS.
 """
 
 
@@ -31,6 +31,8 @@ def main():
     # --- FEATURE SCALING --- #
     """
     Applying the feature scaling to standardize the value used to train the model.
+    Scale both feature and target 'cause the scale differences are huge, and to avoid the model
+    use values out of scale, need to scale both, else the prediction will be not efficiency. 
     """
     from sklearn.preprocessing import StandardScaler
     sc_feature = StandardScaler()
@@ -48,6 +50,10 @@ def main():
     print("'Target 2D Array SCALED", end='\n')
     print(target)
 
+    # --- TRAIN SVR MODEL --- #
+    from sklearn.svm import SVR
+    svr_regression = SVR(kernel='rbf')  # Radial basis function kernel
+    svr_regression.fit(feature, target)
 
 if __name__ == '__main__':
     main()
